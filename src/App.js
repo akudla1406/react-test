@@ -18,10 +18,11 @@ const App = () => {
     const categoryLabel = uniqueTypes.values().next().value;
 
     useEffect(() => {
+
         setNavLabels([...uniqueTypes]);
         setCurrentTab(categoryLabel);
         setCategoryData(data.filter((catData) => catData.type === categoryLabel));
-        setDataLoaded(true);
+        setDataLoaded(true);// eslint-disable-next-line 
     }, [data]);
 
     const clickHandler = (e) => {
