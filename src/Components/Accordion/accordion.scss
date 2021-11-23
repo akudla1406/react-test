@@ -1,0 +1,61 @@
+@import "../variables";
+
+.main {
+  .accordion {
+    .accordion-item {
+      &:last-child {
+        .accordion-header {
+          border-top: none;
+        }
+      }
+
+      .accordion-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: $border-width;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        background-color: $color-white;
+        font-family: cursive;
+        font-size: 14px;
+
+        .accordion-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 25px;
+          border: 3px solid;
+          border-radius: 50%;
+          background-color: $color-grey-medium;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background-color: $color-black;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 3px;
+            background-color: $color-black;
+          }
+
+          &.open {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

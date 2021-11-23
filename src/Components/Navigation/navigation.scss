@@ -1,0 +1,33 @@
+@import "../variables";
+
+.main {
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 0 30px 0;
+
+    li {
+      background-color: $color-white;
+      border: $border-width;
+
+      button {
+        padding: 7px 15px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: background-color 0.3s;
+        font-family: cursive;
+        font-size: 14px;
+      }
+
+      &.active {
+        background-color: $color-blue-active-button;
+      }
+
+      &:last-child {
+        border-right: $border-width;
+      }
+    }
+  }
+}

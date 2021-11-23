@@ -1,0 +1,61 @@
+@import "../../variables";
+
+.main {
+  .accordion {
+    .accordion-item {
+      .inside-accordion {
+        table {
+          width: 100%;
+          border-spacing: 0;
+
+          thead {
+            th {
+              border-right: $border-width;
+              border-bottom: $border-width;
+              font-weight: normal;
+              background-color: $color-grey-medium;
+              padding: 20px 5px;
+              text-align: left;
+
+              &.author-name {
+                text-align: right;
+              }
+
+              &.appliication-name {
+                border-left: $border-width;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              &:nth-child(odd) {
+                background-color: $color-grey-dark;
+              }
+
+              td {
+                border-right: $border-width;
+                border-bottom: $border-width;
+
+                &.appliication-name {
+                  border-left: $border-width;
+                }
+
+                &.author-name {
+                  text-align: right;
+                }
+
+                a {
+                  color: $color-black;
+                  text-decoration: none;
+                  padding: 10px 5px;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
