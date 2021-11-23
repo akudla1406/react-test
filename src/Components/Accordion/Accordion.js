@@ -1,5 +1,5 @@
 import React from 'react';
-import AccordionInside from "./AccordionInside/AccordionInside";
+import AccordionInside from '../AccordionInside/AccordionInside'
 import './accordion.scss';
 
 const Accordion = ({applications}) => {

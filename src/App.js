@@ -22,7 +22,7 @@ const App = () => {
         setNavLabels([...uniqueTypes]);
         setCurrentTab(categoryLabel);
         setCategoryData(data.filter((catData) => catData.type === categoryLabel));
-        setDataLoaded(true);// eslint-disable-next-line 
+        setDataLoaded(true);// eslint-disable-next-line
     }, [data]);
 
     const clickHandler = (e) => {
@@ -40,6 +40,7 @@ const App = () => {
                 (response) => {
                     setData(response);
                 },
+                //set error message when data is not loading
                 (errorMessage) => {
                     setError(`From what to start solving the problem: ${errorMessage}`);
                 }
